@@ -21,3 +21,6 @@ indent_size = 4
 ij_javascript_spaces_within_brackets = true
 ij_javascript_spaces_within_interpolation_expressions = true
 ij_javascript_spaces_within_object_literal_braces = true
+
+[*.vue]
+ij_vue_spaces_within_interpolation_expressions = true
