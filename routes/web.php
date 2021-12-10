@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CurrentStudentController;
 use App\Http\Controllers\Inertia\StudentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -38,5 +39,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::put('/students/{key}', [StudentController::class, 'update'])->name('students.update');
     Route::delete('/students/{key}', [StudentController::class, 'destroy'])->name('students.destroy');
 
-
+    // Student Dashboard
+    Route::get('/me', [CurrentStudentController::class, 'index'])->name('me.index');
+    Route::get('/me/ranking', [CurrentStudentController::class, 'index'])->name('me.ranking');
+    Route::get('/me/attendance', [CurrentStudentController::class, 'index'])->name('me.attendance');
 });
