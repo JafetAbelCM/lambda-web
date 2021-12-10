@@ -16,3 +16,8 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 4
+
+[*.js]
+ij_javascript_spaces_within_brackets = true
+ij_javascript_spaces_within_interpolation_expressions = true
+ij_javascript_spaces_within_object_literal_braces = true
