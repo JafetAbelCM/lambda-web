@@ -58,6 +58,16 @@
                 <jet-input-error :message="form.errors.phone" class="mt-2" />
             </div>
 
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="university" value="University" />
+                <select id="university" v-model="form.university">
+                    <option value="" selected></option>
+                    <option v-for="(university, refId) in universities" :key="refId" :value="university.name">
+                        {{ university.description }}
+                    </option>
+                </select>
+            </div>
+
         </template>
 
         <template #actions>
@@ -84,6 +94,11 @@ export default defineComponent({
         JetInputError,
         JetLabel,
     },
+
+    props: [
+        'universities'
+    ],
+
     data() {
         return {
             form: this.$inertia.form({
@@ -93,9 +108,11 @@ export default defineComponent({
                 dni: '',
                 email: '',
                 phone: '',
-            })
+                university: '',
+            }),
         }
     },
+
     methods: {
         createStudent() {
             this.form.post(route('students.store'), {

@@ -8,7 +8,7 @@
 
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-                <CreateStudentForm />
+                <CreateStudentForm :universities="universities" />
             </div>
         </div>
     </AppLayout>
@@ -23,7 +23,11 @@ export default defineComponent({
     components: {
         CreateStudentForm,
         AppLayout,
-    }
+    },
+
+    props: [
+        'universities'
+    ]
 })
 </script>
 

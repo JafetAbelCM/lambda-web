@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Inertia;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\Firebase\Student;
+use App\Repositories\Firebase\University;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
@@ -16,16 +17,17 @@ class StudentController extends Controller
     private $student;
 
     /**
-     * @var string
+     * @var University
      */
-    private $document = 'students';
+    private $university;
 
     /**
      * @param Student $student
      */
-    public function __construct(Student $student)
+    public function __construct(Student $student, University $university)
     {
         $this->student = $student;
+        $this->university = $university;
     }
 
     /**
@@ -45,7 +47,11 @@ class StudentController extends Controller
 
     public function create()
     {
-        return Inertia::render('Students/Create');
+        $universities = $this->university->all();
+
+        return Inertia::render('Students/Create', [
+            'universities' => $universities,
+        ]);
     }
 
     public function store(Request $request)
@@ -57,8 +63,9 @@ class StudentController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'birthdate' => ['required', 'date', 'max:24'],
             'dni' => ['required', 'string', 'max:24'],
-            'email' => ['required', 'email', 'max:24'],
+            'email' => ['required', 'email', 'max:100'],
             'phone' => ['required', 'string', 'max:24'],
+            'university' => ['nullable', 'string'],
         ])->validateWithBag('createStudent');
 
         $this->student->create($input);
