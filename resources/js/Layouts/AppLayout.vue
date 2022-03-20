@@ -25,6 +25,9 @@
                                 <jet-nav-link :href="route('students.index')" :active="route().current('students.index')">
                                     Students
                                 </jet-nav-link>
+                                <jet-nav-link :href="route('universities.index')" :active="route().current('universities.index')">
+                                    Universities
+                                </jet-nav-link>
                             </div>
                         </div>
 

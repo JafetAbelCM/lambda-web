@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CurrentStudentController;
 use App\Http\Controllers\Inertia\StudentController;
+use App\Http\Controllers\Inertia\UniversityController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -43,4 +44,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/me', [CurrentStudentController::class, 'index'])->name('me.index');
     Route::get('/me/ranking', [CurrentStudentController::class, 'index'])->name('me.ranking');
     Route::get('/me/attendance', [CurrentStudentController::class, 'index'])->name('me.attendance');
+
+    // Universities
+    Route::get('/universities', [UniversityController::class, 'index'])->name('universities.index');
+    Route::get('/universities/create', [UniversityController::class, 'create'])->name('universities.create');
+    Route::post('/universities/create', [UniversityController::class, 'store'])->name('universities.store');
+    Route::get('/universities/{key}', [UniversityController::class, 'show'])->name('universities.show');
+    Route::put('/universities/{key}', [UniversityController::class, 'update'])->name('universities.update');
+    Route::delete('/universities/{key}', [UniversityController::class, 'destroy'])->name('universities.destroy');
+
 });
