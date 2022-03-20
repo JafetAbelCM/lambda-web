@@ -17,7 +17,7 @@
                     <div class="col-span-1">
                         <div class="flex justify-end">
                             <ButtonLink :href="route('students.create')" class="py-3">
-                                Create
+                                Create Student
                             </ButtonLink>
                         </div>
                     </div>
