@@ -11,6 +11,11 @@ class Student extends Base
         return parent::findAll($this->document);
     }
 
+    public function filtered(string $field, $value)
+    {
+        return parent::findAllFiltered($this->document, $field, $value);
+    }
+
     public function get(string $key)
     {
         return parent::find($this->document, $key);
