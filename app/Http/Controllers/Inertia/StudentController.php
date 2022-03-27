@@ -37,7 +37,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = $this->student->all();
+        $owner = auth()->user()->id;
+        $students = $this->student->filtered('owner', $owner);
 
         return Inertia::render('Students/Index', [
             'students' => $students,
@@ -66,6 +67,7 @@ class StudentController extends Controller
             'email' => ['required', 'email', 'max:100'],
             'phone' => ['required', 'string', 'max:24'],
             'university' => ['nullable', 'string'],
+            'owner' => ['required', 'numeric'],
         ])->validateWithBag('createStudent');
 
         $this->student->create($input);
@@ -82,7 +84,22 @@ class StudentController extends Controller
 
     public function update(Request $request, string $key)
     {
+        $input = $request->all();
 
+        Validator::make($input, [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'birthdate' => ['required', 'date', 'max:24'],
+            'dni' => ['required', 'string', 'max:24'],
+            'email' => ['required', 'email', 'max:100'],
+            'phone' => ['required', 'string', 'max:24'],
+            'university' => ['nullable', 'string'],
+            'owner' => ['required', 'numeric'],
+        ])->validateWithBag('updateStudent');
+
+        $this->student->update($key, $input);
+
+        return redirect()->route('students.index');
     }
 
     public function destroy(string $key)
