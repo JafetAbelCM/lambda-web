@@ -1,11 +1,11 @@
 <template>
     <jet-form-section @submitted="createStudent">
         <template #title>
-            Student Details
+            Detalles del Alumno
         </template>
 
         <template #description>
-            Create a new student to collaborate with others on projects.
+            Registra un nuevo alumno a la aplicación
         </template>
 
         <template #form>
@@ -23,43 +23,43 @@
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="first_name" value="First Name" />
+                <jet-label for="first_name" value="Primer Nombre" />
                 <jet-input id="first_name" type="text" class="block w-full mt-1" v-model="form.first_name" autofocus />
                 <jet-input-error :message="form.errors.first_name" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="last_name" value="Last Name" />
+                <jet-label for="last_name" value="Apellidos" />
                 <jet-input id="last_name" type="text" class="block w-full mt-1" v-model="form.last_name" autofocus />
                 <jet-input-error :message="form.errors.last_name" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="birthdate" value="Birthdate" />
+                <jet-label for="birthdate" value="Fecha de Nacimiento" />
                 <jet-input id="birthdate" type="date" class="block w-full mt-1" v-model="form.birthdate" autofocus />
                 <jet-input-error :message="form.errors.birthdate" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="dni" value="ID Number" />
+                <jet-label for="dni" value="Número de identidad" />
                 <jet-input id="dni" type="text" class="block w-full mt-1" v-model="form.dni" autofocus />
                 <jet-input-error :message="form.errors.dni" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="email" value="Email" />
+                <jet-label for="email" value="Correo Electrónico" />
                 <jet-input id="email" type="email" class="block w-full mt-1" v-model="form.email" autofocus />
                 <jet-input-error :message="form.errors.email" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="phone" value="Phone" />
+                <jet-label for="phone" value="Telefono de Contacto" />
                 <jet-input id="phone" type="text" class="block w-full mt-1" v-model="form.phone" autofocus />
                 <jet-input-error :message="form.errors.phone" class="mt-2" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="university" value="University" />
+                <jet-label for="university" value="Universidad " />
                 <select id="university" v-model="form.university">
                     <option value="" selected></option>
                     <option v-for="(university, refId) in universities" :key="refId" :value="university.name">

@@ -17,7 +17,7 @@
                     <div class="col-span-1">
                         <div class="flex justify-end">
                             <ButtonLink :href="route('universities.create')" class="py-3">
-                                Create University
+                                Registrar Universidad
                             </ButtonLink>
                         </div>
                     </div>
@@ -43,16 +43,7 @@
                                             {{ 'Ranking' }}
                                         </div>
                                     </div>
-                                    <div class="ml-4">
-                                        <div class="w-20 flex items-stretch justify-center rounded-3xl border-2 border-blue-800">
-                                            <div class="px-2 py-1 self-center bg-transparent text-2xl font-extrabold text-blue-800 ">
-                                                {{ '100' }}
-                                            </div>
-                                        </div>
-                                        <div class="mt-2 flex items-center justify-center">
-                                            <div>{{ 'PASS'}}</div>
-                                        </div>
-                                    </div>
+
                                 </div>
 
                             </div>

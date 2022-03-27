@@ -2,7 +2,7 @@
     <AppLayout title="Create University">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Create University
+                Registra una Universidad
             </h2>
         </template>
 

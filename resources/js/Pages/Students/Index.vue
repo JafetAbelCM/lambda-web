@@ -2,7 +2,7 @@
     <AppLayout title="Students">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Students
+                Alumnos
             </h2>
         </template>
 
@@ -17,7 +17,7 @@
                     <div class="col-span-1">
                         <div class="flex justify-end">
                             <ButtonLink :href="route('students.create')" class="py-3">
-                                Create Student
+                                Registrar Alumno
                             </ButtonLink>
                         </div>
                     </div>
