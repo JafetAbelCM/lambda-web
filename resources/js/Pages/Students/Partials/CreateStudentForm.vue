@@ -9,6 +9,8 @@
         </template>
 
         <template #form>
+            <input type="hidden" id="owner" v-model="form.owner">
+
             <div class="col-span-6">
                 <jet-label value="Owner" />
 
@@ -94,9 +96,11 @@ export default defineComponent({
         JetInput,
         JetInputError,
         JetLabel,
+        Index,
     },
 
     props: [
+        'user',
         'universities'
     ],
 
@@ -110,6 +114,7 @@ export default defineComponent({
                 email: '',
                 phone: '',
                 university: '',
+                owner: 0,
             }),
         }
     },
@@ -121,6 +126,10 @@ export default defineComponent({
                 preserveScroll: true
             });
         },
+    },
+
+    mounted() {
+        this.form.owner = this.$page.props.user.id
     },
 })
 </script>
