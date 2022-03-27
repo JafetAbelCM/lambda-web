@@ -12,21 +12,18 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex-shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link href="/">
                                     <jet-application-mark class="block h-9 w-auto" />
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </jet-nav-link>
                                 <jet-nav-link :href="route('students.index')" :active="route().current('students.index')">
-                                    Students
+                                    Alumnos
                                 </jet-nav-link>
                                 <jet-nav-link :href="route('universities.index')" :active="route().current('universities.index')">
-                                    Universities
+                                    Universidades
                                 </jet-nav-link>
                             </div>
                         </div>
