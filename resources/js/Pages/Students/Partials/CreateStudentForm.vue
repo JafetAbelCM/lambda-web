@@ -60,7 +60,8 @@
 
             <div class="col-span-6 sm:col-span-4">
                 <jet-label for="university" value="Universidad " />
-                <select id="university" v-model="form.university">
+                <select id="university" v-model="form.university" autocomplete="university-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+
                     <option value="" selected></option>
                     <option v-for="(university, refId) in universities" :key="refId" :value="university.name">
                         {{ university.description }}
