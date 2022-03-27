@@ -29,6 +29,11 @@ class Base
         return $this->db->getReference($path)->getValue();
     }
 
+    protected function findAllFiltered(string $path, string $child, $value)
+    {
+        return $this->db->getReference($path)->orderByChild($child)->equalTo($value)->getValue();
+    }
+
     protected function find(string $path, string $key)
     {
         return $this->db->getReference($path)->getChild($key)->getValue();
