@@ -96,7 +96,6 @@ export default defineComponent({
         JetInput,
         JetInputError,
         JetLabel,
-        Index,
     },
 
     props: [
