@@ -1,0 +1,52 @@
+[debug] [2022-10-12T07:32:42.296Z] ----------------------------------------------------------------------
+[debug] [2022-10-12T07:32:42.298Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Adrian Lujan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-12T07:32:42.298Z] CLI Version:   11.14.2
+[debug] [2022-10-12T07:32:42.298Z] Platform:      win32
+[debug] [2022-10-12T07:32:42.298Z] Node Version:  v16.16.0
+[debug] [2022-10-12T07:32:42.299Z] Time:          Wed Oct 12 2022 02:32:42 GMT-0500 (hora estándar de Perú)
+[debug] [2022-10-12T07:32:42.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-12T07:32:42.363Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"type"}
+[debug] [2022-10-12T07:32:42.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-12T07:32:42.368Z] > authorizing via signed-in user (adrian.lujan@tecsup.edu.pe)
+[debug] [2022-10-12T07:32:42.370Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"type"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Public\Workspace\lambda-web
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-12T07:33:24.229Z] Using project from CLI flag: lambda-web-e72a9
+[debug] [2022-10-12T07:33:24.230Z] > refreshing access token with scopes: []
+[debug] [2022-10-12T07:33:24.231Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-12T07:33:24.232Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-12T07:33:24.775Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-12T07:33:24.776Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-12T07:33:24.785Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lambda-web-e72a9 [none]
+[debug] [2022-10-12T07:33:26.159Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lambda-web-e72a9 200
+[debug] [2022-10-12T07:33:26.159Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lambda-web-e72a9 {"projectId":"lambda-web-e72a9","projectNumber":"70062131097","displayName":"lambda-web","name":"projects/lambda-web-e72a9","resources":{"hostingSite":"lambda-web-e72a9","realtimeDatabaseInstance":"lambda-web-e72a9-default-rtdb","storageBucket":"lambda-web-e72a9.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5f7808d8-f8cc-4695-ab2e-dcdf336fe2d0"}
+[info] i  Using project lambda-web-e72a9 (lambda-web) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
